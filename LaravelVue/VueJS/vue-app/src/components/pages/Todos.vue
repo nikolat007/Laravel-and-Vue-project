@@ -11,7 +11,7 @@
       <tbody>
         <tr v-for="item in todos" :key="item.id">
           <th scope="row">{{ item.id }}</th>
-          <td> {{ item.title }} </td>
+          <td><router-link :to="'/todo/' + item.id" class="">{{ item.title }}</router-link> </td>
           <td>
             <button class="btn btn-success btn-sm" v-on:click="updateTodo(item.id, item.title, item.body)">Update</button>
             <button class="btn btn-danger btn-sm mx-2" v-on:click="deleteTodo(item.id)">Remove</button>
